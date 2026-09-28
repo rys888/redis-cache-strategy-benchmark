@@ -1,0 +1,17 @@
+# Text normalization: keep data files byte-identical across platforms.
+* text=auto eol=lf
+*.csv   text eol=lf
+*.md    text eol=lf
+*.py    text eol=lf
+*.cff   text eol=lf
+*.jmx   text eol=lf
+*.json  text eol=lf
+LICENSE text eol=lf
+
+# Binary assets (never normalize)
+*.png   binary
+
+# Large artifacts are distributed via Releases, never committed.
+*.jtl     export-ignore
+*.tar.gz  export-ignore
+*.zip     export-ignore

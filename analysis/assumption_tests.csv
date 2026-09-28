@@ -1,0 +1,10 @@
+outcome,test,statistic,df1,df2,p
+AvgRT,"Levene (raw scale, 6 cells, median centered)",0.6215367817660674,5.0,24.0,0.6847365695147097
+AvgRT,"Levene (modeled scale, 6 cells, median centered)",0.4026084395625536,5.0,24.0,0.8421422412473012
+AvgRT,Shapiro-Wilk (model residuals),0.9283132096613406,,,0.044298177498844765
+P95,"Levene (raw scale, 6 cells, median centered)",1.054545454545455,5.0,24.0,0.40949274583526
+P95,"Levene (modeled scale, 6 cells, median centered)",1.0925344557181018,5.0,24.0,0.3899757188143551
+P95,Shapiro-Wilk (model residuals),0.9275131175721,,,0.04219181973943148
+Throughput,"Levene (raw scale, 6 cells, median centered)",0.3319396374816385,5.0,24.0,0.8886133608215289
+Throughput,"Levene (modeled scale, 6 cells, median centered)",0.3319396374816385,5.0,24.0,0.8886133608215289
+Throughput,Shapiro-Wilk (model residuals),0.935086177144382,,,0.06711382992356482

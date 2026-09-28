@@ -1,0 +1,10 @@
+outcome,term,df_num,df_den,F_HC3,p_HC3
+AvgRT,Strategy (equal-weight marginal),1,24.0,119.01451687281913,8.747114637101899e-11
+AvgRT,Concurrency (equal-weight marginal),2,24.0,130655.63130540759,3.598808447848912e-49
+AvgRT,Strategy × Concurrency,2,24.0,0.016732759551211673,0.983417917388116
+P95,Strategy (equal-weight marginal),1,24.0,5.762169531731143,0.02448565046376188
+P95,Concurrency (equal-weight marginal),2,24.0,2097.541093041008,1.1479397017470713e-27
+P95,Strategy × Concurrency,2,24.0,0.38741117009754533,0.682980515974563
+Throughput,Strategy (equal-weight marginal),1,24.0,123.5014569755419,6.02089299181728e-11
+Throughput,Concurrency (equal-weight marginal),2,24.0,485.51112458178034,3.8774070708694504e-20
+Throughput,Strategy × Concurrency,2,24.0,0.07069825345599658,0.9319363061141486

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Redis Cache Strategy Benchmark: Cache-Aside vs. Framework-Managed Read-Through in Spring Boot under Concurrent Load"
+abstract: >-
+  A controlled benchmark dataset comparing two server-side caching strategies
+  (explicit Cache-Aside and framework-managed Read-Through) in a Spring Boot
+  application backed by Redis and MySQL. The dataset contains 30 independent runs
+  across 2 strategies and 3 concurrency levels with 5 repetitions each, measured in
+  a verified Hot Cache steady state, and comprises 11,325,558 request-level records.
+type: dataset
+version: "1.0.0"
+date-released: "2026-09-28"
+license: CC-BY-4.0
+keywords:
+  - Redis
+  - caching
+  - cache-aside
+  - read-through
+  - Spring Boot
+  - Spring Cache
+  - benchmark
+  - performance measurement
+  - concurrent load
+authors:
+  - family-names: "Ren"
+    given-names: "Yishun"
+repository-code: "https://github.com/rys888/redis-cache-strategy-benchmark"
+doi: "10.5281/zenodo.<RECORD ID>"
