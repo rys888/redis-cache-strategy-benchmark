@@ -7,6 +7,17 @@ backed by Redis and MySQL, measured across three concurrency levels.
 **Request-level records:** **11,325,558** samples
 **Collected:** 2026-09-28 (single continuous session, 47 minutes)
 
+> ### 📦 Where the data is
+>
+> | What you need | Where to get it |
+> |---|---|
+> | **Complete request-level data** (30 files, 11.3M records, 770 MB uncompressed) | **[GitHub Releases →](https://github.com/rys888/redis-cache-strategy-benchmark/releases/latest)** — file `formal-30runs-20260928.tar.gz` (66 MB) |
+> | **Analysis-ready tables** (30 rows) | This repository: `data/run_level/run_level.csv` |
+> | **Persistent archive + DOI** | Zenodo — [10.5281/zenodo.23011850](https://doi.org/10.5281/zenodo.23011850) |
+>
+> The raw JTL files are **not** stored in Git history (they would bloat the repository
+> irreversibly). They live as a release asset. See [§6](#6-repository-contents).
+
 ---
 
 ## 1. Overview
@@ -106,6 +117,17 @@ Models fitted on the run-level data (N=30) with HC3 heteroskedasticity-robust st
   only 8.8% (6,005 → 6,536 req/s) — the system is throughput-saturated across all three levels.
 - **Interaction:** not detected (p = 0.983 / 0.683 / 0.932; leave-one-out stable in 30/30 models).
 
+### Figures
+
+**Cell means across conditions** — the 30 run-level observations (dots), cell means, and 95%
+t intervals with df=4:
+
+![Group results: AvgRT, P95 and Throughput by strategy and concurrency](analysis/group_results.png)
+
+**Model diagnostics** — residual-versus-fitted and Q-Q plots for the three main models:
+
+![Model diagnostics: residual and Q-Q plots](analysis/model_diagnostics.png)
+
 See `analysis/statistical_report.md` for the complete report and `docs/DATASET.md` for field-level
 documentation.
 
@@ -169,8 +191,32 @@ and the session is aborted.
     └── DATASET.md                field-level data dictionary
 ```
 
-Request-level raw data (30 JTL files, 770 MB, 11.3M records) is **not** stored in Git history.
-See `docs/DATASET.md` §Obtaining the raw data.
+### Complete raw data — download from Releases
+
+The **complete request-level dataset** is distributed as a **release asset**, not stored in Git
+history (committing 770 MB would bloat the repository irreversibly).
+
+> **➡️ [Download the latest release](https://github.com/rys888/redis-cache-strategy-benchmark/releases/latest)**
+>
+> File: **`formal-30runs-20260928.tar.gz`** — 66 MB compressed, 770 MB uncompressed
+>
+> SHA-256 / MD5 of the archive are printed in the release notes.
+
+Unpacking the archive gives:
+
+```
+formal-30runs/results/
+├── jtl/                 30 JTL files — 11,325,558 request-level records
+├── meta/                30 probe snapshots (.stats.json) + 30 window statistics (.jtlstats)
+├── summary/             analysis-ready tables — same files as data/run_level/ here
+│   └── analysis/        full statistical output — same files as analysis/ here
+└── logs/                60 JMeter console logs (host identifiers redacted)
+```
+
+The same archive is also deposited on Zenodo and citable via DOI
+**[10.5281/zenodo.23011850](https://doi.org/10.5281/zenodo.23011850)**.
+
+For parsing guidance and a field-by-field schema, see `docs/DATASET.md`.
 
 ---
 
