@@ -122,11 +122,11 @@ Models fitted on the run-level data (N=30) with HC3 heteroskedasticity-robust st
 **Cell means across conditions** — the 30 run-level observations (dots), cell means, and 95%
 t intervals with df=4:
 
-![Group results: AvgRT, P95 and Throughput by strategy and concurrency](analysis/group_results.png)
+<img src="analysis/group_results.png" alt="Group results: AvgRT, P95 and Throughput by strategy and concurrency" width="100%">
 
 **Model diagnostics** — residual-versus-fitted and Q-Q plots for the three main models:
 
-![Model diagnostics: residual and Q-Q plots](analysis/model_diagnostics.png)
+<img src="analysis/model_diagnostics.png" alt="Model diagnostics: residual and Q-Q plots" width="460">
 
 See `analysis/statistical_report.md` for the complete report and `docs/DATASET.md` for field-level
 documentation.
