@@ -249,7 +249,7 @@ See `CITATION.cff`, or use:
   author    = {Ren, Yishun},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {<DOI>},
+  doi       = {10.5281/zenodo.23011850},
   note      = {30 independent runs, 11,325,558 request-level records}
 }
 ```

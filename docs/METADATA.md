@@ -158,9 +158,11 @@ Attach to the GitHub release **and** upload to the deposit record:
 
 ---
 
-## Two placeholders to fill in
+## Assigned identifiers
 
-| Location | Placeholder | Replace with |
-|---|---|---|
-| `CITATION.cff` line 27 | `<USERNAME>` | your GitHub username |
-| `CITATION.cff` line 28, `README.md` line 251 | `<RECORD ID>` / `<DOI>` | the DOI assigned after deposit |
+| Field | Value |
+|---|---|
+| Repository | https://github.com/rys888/redis-cache-strategy-benchmark |
+| DOI | 10.5281/zenodo.23011850 |
+
+Both `CITATION.cff` and `README.md` already carry this DOI.
